@@ -46,7 +46,8 @@
               "containedElements": [
                 "5267cfcc-f8a4-4b26-8adc-11bf2990d807",
                 "95134aaa-4b28-4ee0-8af0-2f59db2eb62d",
-                "5dc1949a-852b-4a77-8e44-e1dbb92c2adc"
+                "5dc1949a-852b-4a77-8e44-e1dbb92c2adc",
+                "27642c3b-301b-4c59-abff-6b25beb76459"
               ]
             }
           },
@@ -242,13 +243,6 @@
                 "denialOfService": 1,
                 "elevationOfPrivilege": 1
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -993,6 +987,30 @@
                 "y": 360
               }
             ]
+          },
+          {
+            "position": {
+              "x": 435,
+              "y": 110
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Internal System"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "27642c3b-301b-4c59-abff-6b25beb76459",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Text",
+              "name": "Internal System",
+              "hasOpenThreats": false
+            }
           }
         ]
       }
