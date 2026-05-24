@@ -990,7 +990,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Payement\nGatewaye"
+                "text": "Payment\nGatewaye"
               },
               "body": {
                 "stroke": "#333333",
@@ -1086,7 +1086,7 @@
             "id": "a4bf2025-ee67-4aa1-a81f-14bebb2e5fa9",
             "data": {
               "type": "tm.Process",
-              "name": "Payement\nGatewaye",
+              "name": "Payment\nGatewaye",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1097,6 +1097,13 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
