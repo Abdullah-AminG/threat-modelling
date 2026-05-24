@@ -288,6 +288,13 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -665,7 +672,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Create Session",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -679,7 +686,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Create Session"
             ],
             "id": "4db397c2-fa76-4aad-9961-65aff2288c59",
             "source": {
@@ -771,7 +778,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Verify creds",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -787,7 +794,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "Verify creds"
             ],
             "id": "e52222e1-1229-4d7b-bc2e-00c0b73869c2",
             "source": {
