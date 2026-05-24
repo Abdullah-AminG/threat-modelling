@@ -288,13 +288,6 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -886,7 +879,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Token",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -902,7 +895,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "Token"
             ],
             "id": "08fc0db2-5b3b-493c-ac3e-f4ea37f84ff6",
             "source": {
@@ -918,22 +911,7 @@
                 "x": 470,
                 "y": 360
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           }
         ]
       }
