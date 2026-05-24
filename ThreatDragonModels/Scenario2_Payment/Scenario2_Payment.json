@@ -331,8 +331,8 @@
                 "text": "Backend"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -429,12 +429,99 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "8915dff6-534e-4213-8e05-b04f5483a82f",
+                  "title": "API Key Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker steals or guesses the API key used to authenticate with the payment gateway, allowing them to send fraudulent payment requests impersonating the legitimate backend.",
+                  "mitigation": "Rotate API keys regularly, store them in environment variables or a secrets manager, and restrict API key usage to specific IP addresses.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "635b13d6-1626-4643-a6d3-f5bf472ca7af",
+                  "title": "Payment Data Tampering in Transit",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker intercepts the payment request between the backend and payment gateway and modifies the transaction amount or account details before it reaches the gateway.",
+                  "mitigation": "Enforce TLS 1.2+ for all API communications, validate request integrity using HMAC signatures, and implement certificate pinning.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "8966b9e2-bf6a-43f8-9dcd-850d2b841c2e",
+                  "title": "Transaction Repudiation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A customer denies making a payment transaction, and the system has insufficient logs to prove the transaction occurred, leading to disputes and financial loss.",
+                  "mitigation": "Maintain tamper-proof transaction logs with timestamps, implement digital receipts, and store gateway transaction IDs in the database.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "aba87c3c-13d3-4d39-a4ff-93c1ada37867",
+                  "title": "Payment Data Leakage",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Sensitive payment data including card numbers and API keys are exposed due to insecure storage or logging practices in the backend or transaction database.",
+                  "mitigation": "Never log sensitive payment data, encrypt transaction records at rest, and comply with PCI-DSS standards for handling cardholder data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "8da11788-17b7-41ba-bee7-07dbe29302cf",
+                  "title": "Payment Gateway DoS Attack",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "An attacker floods the payment endpoint with fake transaction requests, overwhelming the backend and making the payment service unavailable to legitimate customers.",
+                  "mitigation": "Implement rate limiting on payment endpoints, use a WAF, and configure auto-scaling to handle traffic spikes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "d1df0759-fd89-448e-996a-7dbf36b4720c",
+                  "title": "Unauthorized Refund via Privilege Escalation",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "A regular user exploits a vulnerability in the backend to gain admin-level access and initiate unauthorized refunds or modify transaction records in the database.",
+                  "mitigation": "Implement strict role-based access control (RBAC), validate all user permissions server-side, and audit all admin-level operations.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 2
+              }
             }
           },
           {
@@ -1097,13 +1184,6 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1279,6 +1359,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 6
   }
 }
