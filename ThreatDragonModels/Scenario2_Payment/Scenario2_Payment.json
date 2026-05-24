@@ -20,16 +20,16 @@
           {
             "position": {
               "x": 54.99999999999898,
-              "y": 139.00000000000125
+              "y": 129.00000000000125
             },
             "size": {
               "width": 420,
-              "height": 450
+              "height": 460
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "ae78616f-6068-455e-93c1-a6efc010b3bf",
             "zIndex": -1,
+            "id": "ae78616f-6068-455e-93c1-a6efc010b3bf",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -38,13 +38,45 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "3805861b-ad5a-4057-a1f8-686e426abaea",
-                "5b5c5998-a30f-416c-98bb-e9f060bb4232"
+                "5b5c5998-a30f-416c-98bb-e9f060bb4232",
+                "90626e68-22f2-45d0-a190-67c38de38bf9",
+                "aa28e3d6-f210-4a59-a4c9-57941e4f3380"
               ],
               "containedElements": [
                 "1204f469-147b-4296-8a49-3de852153c85",
                 "a8bb0da7-de3d-4a4c-ac80-88f69cb8ee94",
                 "37b58477-86be-472c-9030-537ea0bf58e7",
                 "ffab5686-1b09-47ae-ad02-e72a95cf2196"
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 517.9999999999993,
+              "y": 129.00000000000017
+            },
+            "size": {
+              "width": 240,
+              "height": 460
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "c357d4b9-bca7-4460-9208-71fa30b7dd3d",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "5b5c5998-a30f-416c-98bb-e9f060bb4232",
+                "90626e68-22f2-45d0-a190-67c38de38bf9",
+                "aa28e3d6-f210-4a59-a4c9-57941e4f3380"
+              ],
+              "containedElements": [
+                "a4bf2025-ee67-4aa1-a81f-14bebb2e5fa9",
+                "e16ab098-dd1e-400e-a597-ad2b384e269f"
               ]
             }
           },
@@ -820,7 +852,8 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "ae78616f-6068-455e-93c1-a6efc010b3bf"
+                "ae78616f-6068-455e-93c1-a6efc010b3bf",
+                "c357d4b9-bca7-4460-9208-71fa30b7dd3d"
               ]
             },
             "labels": [
@@ -836,6 +869,115 @@
               "port": "6068499f-73de-4409-bdef-5118075c9aba"
             },
             "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Transaction \nResult",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "ae78616f-6068-455e-93c1-a6efc010b3bf",
+                "c357d4b9-bca7-4460-9208-71fa30b7dd3d"
+              ]
+            },
+            "labels": [
+              "Transaction \nResult"
+            ],
+            "id": "90626e68-22f2-45d0-a190-67c38de38bf9",
+            "source": {
+              "cell": "a4bf2025-ee67-4aa1-a81f-14bebb2e5fa9",
+              "port": "0dc7bb8e-d6ee-4af0-a592-e30081a333b2"
+            },
+            "target": {
+              "cell": "37b58477-86be-472c-9030-537ea0bf58e7",
+              "port": "5351fece-3437-475c-9ef6-5606079936af"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "API KEY + \nPay Data",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "ae78616f-6068-455e-93c1-a6efc010b3bf",
+                "c357d4b9-bca7-4460-9208-71fa30b7dd3d"
+              ]
+            },
+            "labels": [
+              "API KEY + \nPay Data"
+            ],
+            "id": "aa28e3d6-f210-4a59-a4c9-57941e4f3380",
+            "source": {
+              "cell": "37b58477-86be-472c-9030-537ea0bf58e7",
+              "port": "03d0476a-10d8-453b-92bc-d920b31357b5"
+            },
+            "target": {
+              "cell": "a4bf2025-ee67-4aa1-a81f-14bebb2e5fa9",
+              "port": "6068499f-73de-4409-bdef-5118075c9aba"
+            },
+            "vertices": [
+              {
+                "x": 400,
+                "y": 330
+              },
+              {
+                "x": 490,
+                "y": 310
+              }
+            ]
           },
           {
             "position": {
@@ -858,6 +1000,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -941,7 +1084,6 @@
               ]
             },
             "id": "a4bf2025-ee67-4aa1-a81f-14bebb2e5fa9",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "Payement\nGatewaye",
@@ -978,6 +1120,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1061,7 +1204,6 @@
               ]
             },
             "id": "e16ab098-dd1e-400e-a597-ad2b384e269f",
-            "zIndex": 12,
             "data": {
               "type": "tm.Process",
               "name": "Email\nService",
@@ -1075,6 +1217,54 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 209,
+              "y": 120
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "InternalSystem"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "f2ee2b69-b7c6-4a9f-abb8-132a99285896",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Text",
+              "name": "Internal System",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 585,
+              "y": 120
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "External Services (Third-Party)"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "4106a3df-b08e-478a-8b61-df398c3a0517",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Text",
+              "name": "External Services (Third-Party)",
+              "hasOpenThreats": false
             }
           }
         ]
