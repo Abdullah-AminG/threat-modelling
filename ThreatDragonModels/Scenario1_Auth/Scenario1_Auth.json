@@ -19,7 +19,7 @@
         "cells": [
           {
             "position": {
-              "x": 400,
+              "x": 410,
               "y": 110
             },
             "size": {
@@ -529,13 +529,6 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -558,7 +551,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Auth response",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -572,7 +565,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Auth response"
             ],
             "id": "82a314ef-a2b5-416d-b0f5-285bed82853a",
             "source": {
@@ -590,7 +583,7 @@
               },
               {
                 "x": 360,
-                "y": 310
+                "y": 270
               },
               {
                 "x": 320,
@@ -618,7 +611,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Login",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -634,7 +627,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "Login"
             ],
             "id": "9aaffdfb-86bb-4e00-a5dc-e6f4c87a6887",
             "source": {
@@ -724,7 +717,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Store session",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -740,7 +733,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "Store session"
             ],
             "id": "8bc71b75-8c49-468e-96ba-cb95449c3b43",
             "source": {
@@ -832,7 +825,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "User record",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -848,7 +841,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "User record"
             ],
             "id": "5c34fdff-8df1-49e7-b9b4-13a51125d067",
             "source": {
@@ -916,7 +909,7 @@
             "vertices": [
               {
                 "x": 512,
-                "y": 340
+                "y": 360
               }
             ]
           }
