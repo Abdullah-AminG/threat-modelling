@@ -180,15 +180,67 @@
                   "new": false,
                   "number": 1,
                   "score": ""
+                },
+                {
+                  "id": "7f652b03-9521-4798-baa2-edc58745e3d4",
+                  "title": "Session Token Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker intercepts and modifies the session token to hijack an authenticated user session and gain unauthorized access.",
+                  "mitigation": "Use cryptographically signed session tokens (e.g. JWT with HMAC), enforce HTTPS, and set HttpOnly and Secure flags on cookies.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "2d0a3249-b05b-413a-9deb-fec10ec91339",
+                  "title": "Password Database Leak",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "If the user database is compromised, plaintext or weakly hashed passwords may be exposed, allowing attackers to access multiple accounts.",
+                  "mitigation": "Store passwords using strong hashing algorithms (bcrypt or Argon2), apply database access controls, and encrypt sensitive data at rest.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "d02b8b03-f1d7-4664-8614-3b1145a40da1",
+                  "title": "Login Endpoint Brute Force DoS",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker floods the login endpoint with repeated requests, overwhelming the web server and making the application unavailable to legitimate users.",
+                  "mitigation": "Implement rate limiting on login attempts, use a Web Application Firewall (WAF), and deploy CAPTCHA to block automated requests.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "ce873077-f6a2-424a-8be8-14de28f7c999",
+                  "title": "Privilege Escalation via Session Hijacking",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker steals a valid session token of an admin user and gains elevated privileges, accessing administrative functions without authorization.",
+                  "mitigation": "Enforce role-based access control (RBAC), regenerate session tokens upon privilege changes, and implement session timeout policies.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 2,
-                "tampering": 0,
+                "tampering": 1,
                 "repudiation": 0,
-                "informationDisclosure": 0,
-                "denialOfService": 0,
-                "elevationOfPrivilege": 0
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
               }
             },
             "tools": {
@@ -947,6 +999,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 5
   }
 }
